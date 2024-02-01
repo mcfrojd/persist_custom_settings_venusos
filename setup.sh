@@ -75,6 +75,20 @@ read -s -n 1
 clear
 
 #
+# remove compressed file.
+#
+echo "remove compressed file."
+echo ""
+rm -r tailscale_loc.tgz
+echo "done."
+echo ""
+sleep 1
+echo "press any key to continue"
+echo ""
+read -s -n 1
+clear
+
+#
 # copy the nessesary files to /usr/bin.
 #
 echo "copy the nessesary files to /usr/bin."
