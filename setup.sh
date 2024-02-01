@@ -22,18 +22,14 @@ read -s -n 1
 clear
 
 ####################################################################################
-# INSTALL TAILSCALE - 
+# INSTALL TAILSCALE - change this variable to match the tailescale latest version
 ####################################################################################
-
-# change this variable to match the tailescale latest version
 TAILSCALE_VERSION="1.58.2"
 TAILSCALE_TGZ="tailscale_""$TAILSCALE_VERSION""_arm.tgz"
 
 clear
 
-#
 # move into home directory of the user root.
-#
 echo "move into home directory of the user root."
 echo ""
 cd /home/root
@@ -45,9 +41,8 @@ echo ""
 read -s -n 1
 clear
 
-#
+
 # download the latest tailscale package.
-#
 echo "download the latest tailscale package."
 echo ""
 curl -o tailscale_loc.tgz https://pkgs.tailscale.com/stable/$TAILSCALE_TGZ
@@ -60,9 +55,7 @@ echo ""
 read -s -n 1
 clear
 
-#
 # uncompress the package.
-#
 echo "uncompress the package."
 echo ""
 tar -xvf tailscale_loc.tgz
@@ -74,9 +67,7 @@ echo ""
 read -s -n 1
 clear
 
-#
 # remove compressed file.
-#
 echo "remove compressed file."
 echo ""
 rm -r tailscale_loc.tgz
@@ -88,12 +79,22 @@ echo ""
 read -s -n 1
 clear
 
-#
 # copy the nessesary files to /usr/bin.
-#
 echo "copy the nessesary files to /usr/bin."
 echo ""
 cp /home/root/tailscale_"$TAILSCALE_VERSION"_arm/tailscale /home/root/tailscale_"$TAILSCALE_VERSION"_arm/tailscaled /usr/bin/
+echo "done."
+echo ""
+sleep 1
+echo "press any key to continue"
+echo ""
+read -s -n 1
+clear
+
+# Remove the uncompressed folder.
+echo "Remove the uncompressed folder."
+echo ""
+rm -r /home/root/tailscale_"$TAILSCALE_VERSION"_arm
 echo "done."
 echo ""
 sleep 1
@@ -181,7 +182,7 @@ clear
 echo "connect to your tailscale account"
 echo ""
 echo 'run "tailscale up -ssh --advertise-routes=192.168.77.0/24"'
-
+echo ""
 #
 # if there was no errors, tailscale should be installed and ready!
 #
