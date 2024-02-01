@@ -8,3 +8,4 @@ cd /data/tailscale_on_venus_os-master
 clear
 ls -al
 ```
+test
