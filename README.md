@@ -10,4 +10,8 @@ chmod a+x setup.sh
 clear
 ls -al
 ```
-test
+
+### Things to check / improve
+
+1. on next firmware update, check if the file authorized_keys is still there or if this needs to be added to this script
+2. on next firmware update, verify that this script works.
