@@ -9,6 +9,7 @@ cd /data/persist_custom_settings_venusos-master
 chmod a+x setup.sh
 clear
 ls -al
+./setup.sh
 ```
 
 ### Things to check / improve
