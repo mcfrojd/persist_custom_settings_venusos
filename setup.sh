@@ -20,13 +20,13 @@ cp /data/persist_custom_settings_venusos-master/files/hosts /etc/hosts
 hostname $HOSTNAME
 echo "done."
 echo ""
+echo "You need to logout and back in again for the promt to change"
+echo ""
 sleep 1
 echo "press any key to continue"
 echo ""
 read -s -n 1
 clear
-echo "You need to logout and back in again for the promt to change"
-echo ""
 
 ####################################################################################
 # ADD Aliases
