@@ -19,6 +19,8 @@ ls -al
 1. Change the hostname. (If you dont edit the files the hostname will be set to "doris-venusos")
    1. You need to edit the files "hostname" & "hosts" to your liking
    2. You need to change the variable "HOSTNAME" in setup.sh to your linking
+2. Add your favorite ALIASES
+   1. You need to change / add your aliases in setup.sh
 
 ### Things to check / improve
 

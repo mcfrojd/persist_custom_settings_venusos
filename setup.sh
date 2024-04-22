@@ -1,8 +1,10 @@
 #!/bin/bash
+
 ####################################################################################
 # VARIABLES
 ####################################################################################
 HOSTNAME="doris-venusos"
+
 ####################################################################################
 # CHANGE HOSTNAME - Copy the hosts and hostname file to replace them
 ####################################################################################
@@ -27,5 +29,37 @@ clear
 echo "You need to logout and back in again for the promt to change"
 echo ""
 
+####################################################################################
+# ADD Aliases
+####################################################################################
+echo "Add your prefered ALIASES"
+echo ""
 
+echo "Add to your .bash_aliases file"
+echo ""
+
+cat > /home/root/.bash_aliases <<'endmsg'
+alias ll="ls -alhF"
+alias cl="ls -alhF /data/dbus-shelly-em-smartmeter/current.log /data/dbus-shellyPlug/current.log"
+endmsg
+
+echo "Add to your .bashrc file"
+echo ""
+cat > /home/root/.bashrc <<'endmsg'
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+endmsg
+
+echo "Add to your .profile file"
+echo ""
+cat > /home/root/.profile <<'endmsg'
+if [ -f "$HOME/.bashrc" ]; then
+. "$HOME/.bashrc"
+fi
+endmsg
+
+echo "Reload to activate"
+echo ""
+source ~/.bashrc
 ####################################################################################
