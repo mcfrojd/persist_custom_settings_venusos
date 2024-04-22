@@ -14,7 +14,7 @@ ls -al
 ./setup.sh
 ```
 
-### What will this scrip do?
+### What will this script do?
 
 1. Change the hostname. (If you dont edit the files the hostname will be set to "doris-venusos")
    1. You need to edit the files "hostname" & "hosts" to your liking
