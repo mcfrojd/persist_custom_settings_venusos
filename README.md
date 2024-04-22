@@ -7,8 +7,9 @@ rm -r /data/persist_custom_settings_venusos-master
 wget https://github.com/mcfrojd/persist_custom_settings_venusos/archive/refs/heads/master.zip
 unzip master.zip "persist_custom_settings_venusos-master/*" -d /data
 rm master.zip
-chmod a+x /data/persist_custom_settings_venusos-master/setup.sh
-./data/persist_custom_settings_venusos-master/setup.sh
+cd /data/persist_custom_settings_venusos-master
+chmod a+x setup.sh
+./setup.sh
 ```
 
 ### What will this script do?
