@@ -12,6 +12,7 @@ chmod a+x setup.sh
 clear
 ls -al
 ./setup.sh
+cd /home/root
 ```
 
 ### What will this script do?

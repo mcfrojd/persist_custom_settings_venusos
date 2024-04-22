@@ -24,7 +24,6 @@ sleep 1
 echo "press any key to continue"
 echo ""
 read -s -n 1
-cd /home/root
 clear
 echo "You need to logout and back in again for the promt to change"
 echo ""
