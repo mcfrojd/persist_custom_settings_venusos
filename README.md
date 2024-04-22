@@ -1,3 +1,5 @@
+Small persisted script to update various setting that might get lost when installing latest venus os.
+
 ### Download and unpack this repo on your device.
 
 ```
@@ -12,7 +14,12 @@ ls -al
 ./setup.sh
 ```
 
+### What will this scrip do?
+
+1. Change the hostname. (If you dont edit the files the hostname will be set to "doris-venusos")
+   1. You need to edit the files "hostname" & "hosts" to your liking
+   2. You need to change the variable "HOSTNAME" in setup.sh to your linking
+
 ### Things to check / improve
 
-1. on next firmware update, check if the file authorized_keys is still there or if this needs to be added to this script
-2. on next firmware update, verify that this script works.
+1. on next firmware update, verify that this script works.
